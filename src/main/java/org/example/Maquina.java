@@ -22,7 +22,7 @@ public class Maquina {
     }
 
     public void setAgua(int agua) {
-        if (agua > 0 && agua < 5000) {
+        if (agua >= 0 && agua <= 5000) {
             this.agua = agua;
         } else {
             System.out.println("Error: Dato incorrecto");
@@ -126,6 +126,10 @@ public void americano () {
         if(agua >= 100 && cafe >= 14 && crema >= 70){
             capu = true;
         } else{  capu = false;}
+
+
+
+
         if(agua >= 120 && cafe >= 20){
             exp = true;
         } else{  exp = false;}
