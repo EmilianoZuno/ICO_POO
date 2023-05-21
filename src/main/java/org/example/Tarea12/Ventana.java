@@ -30,7 +30,7 @@ public class Ventana extends JFrame {
 
     public Ventana(String title) throws HeadlessException {
         super(title);
-        this.setSize(500, 700);
+        this.setSize(800, 700);
         layout = new GridLayout(2, 1);
         this.setLayout(layout);
         //panel1
@@ -87,6 +87,12 @@ public class Ventana extends JFrame {
                 nuevo.setPesoEnGb(Double.parseDouble(txtPeso.getText()));
                 nuevo.setPlataforma(txtPlataforma.getText());
                 nuevo.setDesarrollador(txtDesarrollador.getText());
+                txtId.setText("");
+                txtNombre.setText("");
+                txtPlataforma.setText("");
+                txtPeso.setText("");
+                txtDesarrollador.setText("");
+                txtGenero.setText("");
                 //info.add(nuevo);
                 modelo.agregarJuego(nuevo);
                 tblTabla.updateUI();

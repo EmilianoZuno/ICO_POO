@@ -3,9 +3,7 @@ package org.example.EjemploLayoutsSwing;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -83,6 +81,12 @@ public class VentanaSwing extends JFrame {
         panel4.setBackground(new Color(222,245,204));
         this.getContentPane().add(panel4,3);
 
+        this.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                System.exit(0);
+            }
+        });
         this.setVisible(true);
     }
 }
